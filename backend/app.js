@@ -1,12 +1,11 @@
 const express = require("express");
+const userRouter = require("./routes/user");
+
 
 const app = express();
+app.use(userRouter);
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hi Im from Back Server</h1>')
-});
-
-app.get('/my', (req, res) => {
     res.send('<h1>My Page</h1>')
 });
 
