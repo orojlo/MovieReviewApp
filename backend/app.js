@@ -3,7 +3,10 @@ const userRouter = require("./routes/user");
 
 
 const app = express();
-app.use(userRouter);
+app.use(express.json())
+app.use('/api/user', userRouter);
+
+
 
 app.get('/', (req, res) => {
     res.send('<h1>My Page</h1>')

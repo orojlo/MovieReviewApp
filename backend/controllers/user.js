@@ -1,4 +1,5 @@
-exports.createUser = (req, res) => {
-    res.send("<h1> for later</h1>");
-}
+exports.create = (req, res) => {
+    console.log(req.body);
+    res.json({ user: req.body});
+};
 
